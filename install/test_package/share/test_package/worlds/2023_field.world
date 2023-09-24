@@ -1,0 +1,273 @@
+<sdf version='1.10'>
+  <world name='default'>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='field'>
+      <pose>0 0 0 0 0 0</pose>
+      <static>true</static>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/kevin/ros2_ws/src/install/test_package/share/test_package/worlds/2023FRC.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/kevin/ros2_ws/src/install/test_package/share/test_package/worlds/2023FRC.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cube_0'>
+      <pose>-1.2030000000021506 -0.56861003305384927 0.1216739896873274 2.7893867677856716e-07 -1.8117486276571005e-11 4.5488923457823656e-18</pose>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/kevin/ros2_ws/src/install/test_package/share/test_package/worlds/2023Cube.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.24099999999999999 0.24099999999999999 0.23699999999999999</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.01</mu>
+                <mu2>0.01</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+      <static>false</static>
+    </model>
+    <model name='cube_1'>
+      <pose>1.2029999897740025 -0.5686100472659753 0.12167398970927874 3.9887363586298171e-07 -8.6296345951402271e-08 -1.7130260496892768e-14</pose>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/kevin/ros2_ws/src/install/test_package/share/test_package/worlds/2023Cube.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.24099999999999999 0.24099999999999999 0.23699999999999999</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1000000</mu>
+                <mu2>1000000</mu2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <min_depth>10</min_depth>
+                <max_vel>0.0001</max_vel>
+              </ode>
+            </contact>
+            <soft_contact>
+              <dart>
+                <damping>1000</damping>
+                <bone_attachment>100</bone_attachment>
+                <stiffness>100</stiffness>
+                <flesh_mass_fraction>0.050000000000000003</flesh_mass_fraction>
+              </dart>
+            </soft_contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+        <mass>1000</mass>
+      </link>
+      <self_collide>false</self_collide>
+      <static>false</static>
+    </model>
+    <model name='cube_2'>
+      <pose>1.2029999896942998 3.0889999524767395 0.12167535197546983 4.0104215316156812e-07 -8.6968364923232321e-08 -1.7348041047071591e-14</pose>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/kevin/ros2_ws/src/install/test_package/share/test_package/worlds/2023Cube.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.24099999999999999 0.24099999999999999 0.23699999999999999</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.01</mu>
+                <mu2>0.01</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+      <static>false</static>
+    </model>
+    <model name='cube_3'>
+      <pose>-1.2030000000021497 3.0889999665821195 0.12167535190431011 2.8200888191517467e-07 -1.8201564012565252e-11 9.8905421217679956e-18</pose>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/kevin/ros2_ws/src/install/test_package/share/test_package/worlds/2023Cube.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.01</mu>
+                <mu2>0.01</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.24099999999999999 0.24099999999999999 0.23699999999999999</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>8</mu>
+                <mu2>8</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+      <static>false</static>
+    </model>
+    <light name='spotlight' type='spot'>
+      <pose>4.4524782229241957 1.3430781835852148 2 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0 0 -1</direction>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <attenuation>
+        <range>4</range>
+        <linear>0.5</linear>
+        <constant>0.20000000000000001</constant>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0.10000000000000001</inner_angle>
+        <outer_angle>0.5</outer_angle>
+        <falloff>0.80000000000000004</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
